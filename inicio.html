@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		/>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<script>
+			function iniciarJogo() {
+				var nivel = document.getElementById("nivel").value;
+
+				if (nivel === "") {
+					alert("Selecione um nivel para iniciar o jogo");
+					return false;
+				}
+				window.location.href = "index.html?" + nivel; // ? para separar os parametros
+			}
+		</script>
+		<title>Mata Mosquito</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<img src="img/game.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select name="" class="form-control" id="nivel">
+								<option value="">Selecione o nivel</option>
+								<option value="normal">Normal</option>
+								<option value="dificil">Dificil</option>
+								<option value="chucknorris">Dificuldade cis</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<button
+							type="button"
+							class="btn btn-lg btn-danger"
+							onclick="iniciarJogo()"
+						>
+							Iniciar Jogo
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</body>
+</html>
